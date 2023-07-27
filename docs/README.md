@@ -1,13 +1,13 @@
 
 ![](./docs/src/assets/icon.png)
-# ADSeismic: An Open Source High Performance Package for Automatic Differentiation (AD) based General Seismic Inversion
+# ADFWI: Automatic Differentiation (AD) based Full Waveform Inversion
 
 
 | Documentation                                                | Build Status                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://kailaix.github.io/ADSeismic.jl/dev/) | [![Build Status](https://travis-ci.com/kailaix/ADSeismic.jl.svg?branch=master)](https://travis-ci.com/kailaix/ADSeismic.jl) |
+| [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://kailaix.github.io/ADFWI.jl/dev/) | [![Build Status](https://travis-ci.com/kailaix/ADFWI.jl.svg?branch=master)](https://travis-ci.com/kailaix/ADFWI.jl) |
 
-ADSeismic is built for general seismic inversion problems, such as estimating velocity model, source location and time function. The package implements the forward FDTD (finite difference time domain) simulation of acoustic and elastic wavefields and enables flexible inversions of parameters in the wave equations using **automatic differentiation**. Several features of this package includes:
+ADFWI is built for 2D full waveform seismic inversion problems, such as estimating velocity model, source location and time function. The package implements the forward FDTD (finite difference time domain) simulation of acoustic and elastic wavefields and enables flexible inversions of parameters in the wave equations using **automatic differentiation**. Several features of this package includes:
 
 - **Battery included**: No adjoint state method codes required for building your own inversion models; Automatic differentiation is the work horse, making it unified approach to various seismic inversion problems such as full waveform inversion (FWI), earthquake location inversion, and source rupture inversion.
 - **Neural Networks**: Easy to integrate Neural Networks (NN) into seismic inversion.
@@ -26,18 +26,13 @@ Examples can be found int these papers:
 
 ## Installation
 
-ADSeismic.jl requires proper installation of [ADCME.jl](https://github.com/kailaix/ADCME.jl/).
+ADFWI.jl requires proper installation of [ADCME.jl](https://github.com/kailaix/ADCME.jl/).
 ```julia
 using Pkg
 Pkg.add("ADCME")
 ```
 This might take up to 20 minutes for complete installation. 
 
-Then install this package (ADSeismic.jl) by 
-```julia
-using Pkg
-Pkg.add("ADSeismic")
-```
 
 To enable GPU support, make sure `nvcc` is available on your machine, and then
 ```julia
